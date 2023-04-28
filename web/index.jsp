@@ -18,7 +18,7 @@
     if (online)  {
 %>
 <%
-   String text = "User";
+   String text = "User1";
 %>
 <h1>HELLO  <%=text%></h1>
 
