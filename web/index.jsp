@@ -17,10 +17,8 @@
     boolean online = true;
     if (online)  {
 %>
-<%
-   String text = "User1";
-%>
-<h1>HELLO  <%=text%></h1>
+
+<h1>HELLO </h1>
 
 <div class="container p-3">
 <%--            <%--%>

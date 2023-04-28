@@ -8,6 +8,7 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="JavaEE_2_JSP_Part/web/Web" />
+      <element id="javaee-facet-resources" facet="JavaEE_ImgBoard/web/Web" />
     </root>
   </artifact>
 </component>
