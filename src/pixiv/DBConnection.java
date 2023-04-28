@@ -1,7 +1,6 @@
 package pixiv;
 
 import jakarta.servlet.http.Part;
-import labs_jdbc.Student;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,7 +36,7 @@ public class DBConnection {
                 post.setId(resultSet.getLong("id"));
                 post.setName(resultSet.getString("full_name"));
 
-                post.setImage((Image)resultSet.getBlob("image"));
+
 
 
                 posts.add(post);
