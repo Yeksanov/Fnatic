@@ -18,7 +18,7 @@
     if (online)  {
 %>
 
-<h1>HELLO USER</h1>
+<h1>HELLO US1ER</h1>
 
 <div class="container p-3">
 <%--            <%--%>
