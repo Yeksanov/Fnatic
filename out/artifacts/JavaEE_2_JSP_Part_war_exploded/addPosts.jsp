@@ -11,7 +11,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-6 mx-auto">
-            <form action="/upload" method="post" enctype="multipart/form-data">
+            <form action="/upload2" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-12">
                         <label>NAME:</label>

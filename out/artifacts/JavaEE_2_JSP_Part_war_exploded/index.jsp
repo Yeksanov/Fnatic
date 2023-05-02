@@ -18,7 +18,9 @@
     if (online)  {
 %>
 
-<h1>HELLO USER</h1>
+<h1>HELLO US1ER</h1>
+<%@include file="head.jsp"%>
+<%@include file="navbar.jsp"%>
 
 <div class="container p-3">
 <%--            <%--%>

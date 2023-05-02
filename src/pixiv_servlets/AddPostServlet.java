@@ -70,6 +70,6 @@ public class AddPostServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/addPosts.jsp").forward(request, response);
+        request.getRequestDispatcher("/addPosts_IMG.jsp").forward(request, response);
     }
 }
