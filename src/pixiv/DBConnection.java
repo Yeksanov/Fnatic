@@ -64,4 +64,38 @@ public class DBConnection {
 
         }
     }
+
+    public static void addImage(String imageUrl) {
+       try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO images (image) VALUES (?)");
+            statement.setString(1, imageUrl);
+            statement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    public static String getImage(Long id) {
+        String imageUrl = null;
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT image FROM images WHERE id = ?"
+            );
+            statement.setLong(1, id);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                imageUrl = resultSet.getString("url");
+
+            }
+
+        } catch (SQLException ex) {
+
+        }
+        return imageUrl;
+    }
 }

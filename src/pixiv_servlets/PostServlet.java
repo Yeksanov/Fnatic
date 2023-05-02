@@ -19,6 +19,7 @@ public class PostServlet extends HttpServlet {
         ArrayList<Posts> posts = DBConnection.getPosts();
 
         request.setAttribute("posty", posts);
+
         request.getRequestDispatcher("/index.jsp").forward(request, response);
 
     }
