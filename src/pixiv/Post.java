@@ -5,16 +5,8 @@ public class Post {
     private int id;
     private String author;
     private String imageUrl;
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     private String description;
+
 
     public Post() {
     }
@@ -23,6 +15,7 @@ public class Post {
         this.id = id;
         this.author = author;
         this.description = description;
+        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -39,6 +32,13 @@ public class Post {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getDescription() {

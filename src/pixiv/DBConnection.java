@@ -18,7 +18,7 @@ public class DBConnection {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:8889/jdbc_labs", "root", "root");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:8889/pixiv", "root", "root");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,6 +60,8 @@ public class DBConnection {
 
             statement.setString(1, posts.getAuthor());
             statement.setString(2, posts.getImageUrl());
+            statement.setString(3, posts.getDescription());
+
 
 
             statement.executeUpdate();
@@ -69,17 +71,17 @@ public class DBConnection {
         }
     }
 
-    public static void addImage(String imageUrl) {
-       try {
-            PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO images (image) VALUES (?)");
-           statement.setString(1, imageUrl);
-           statement.executeUpdate();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-
-    }
+//    public static void addImage(String imageUrl) {
+////       try {
+////            PreparedStatement statement = connection.prepareStatement(
+////                    "INSERT INTO images (image) VALUES (?)");
+////           statement.setString(1, imageUrl);
+////           statement.executeUpdate();
+////        } catch (SQLException ex) {
+////            ex.printStackTrace();
+////        }
+//
+//    }
 
     public static String getImage(int id) {
         String imageUrl = null;

@@ -12,26 +12,36 @@
     <div class="row">
         <div class="col-6 mx-auto">
             <form action="/upload" method="post" enctype="multipart/form-data">
-<%--
+
                 <div class="row">
                     <div class="col-12">
-                        <label>NAME:</label>
-                    </div>
-                </div>
-<%--                <div class="row mt-2">--%>
-<%--                    <div class="col-12">--%>
-<%--                        <input type="text" class="form-control" name="post_full_name">--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <label>IMAGE:</label>
+                        <label>Author:</label>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-12">
-<%--                        <input type="file" class="form-control" name="post_image" accept="image/*">--%>
-                        <input type="file" name="file" accept="image/*">
+                        <input type="text" class="form-control" name="post_author">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <label>Image:</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <input type="file" class="form-control" name="post_image" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <label>DESCRIPTION : </label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <textarea name="post_description" class="form-control" rows="5"></textarea>
                     </div>
                 </div>
 
