@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-6 mx-auto">
             <form action="/upload" method="post" enctype="multipart/form-data">
-<%--                action="http://localhost:8888/UploadServlet"--%>
+<%--
                 <div class="row">
                     <div class="col-12">
                         <label>NAME:</label>
@@ -31,7 +31,7 @@
                 <div class="row mt-2">
                     <div class="col-12">
 <%--                        <input type="file" class="form-control" name="post_image" accept="image/*">--%>
-                        <input type="file" name="file">
+                        <input type="file" name="file" accept="image/*">
                     </div>
                 </div>
 

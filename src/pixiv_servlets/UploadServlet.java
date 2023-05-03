@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import pixiv.DBConnection;
-import pixiv.Image;
+
 
 import java.io.*;
 import java.nio.file.Files;
@@ -34,8 +34,9 @@ public class UploadServlet extends HttpServlet {
 
             // Получаем URL изображения
             String contextPath = getServletContext().getContextPath();
-            String imageUrl = contextPath + "/uploads/" + fileName;
+//           String imageUrl0 = contextPath + fileName;
 
+            String imageUrl = "http://localhost:8888/images1/" + fileName;
 
 
             DBConnection.addImage(imageUrl);

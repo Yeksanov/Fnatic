@@ -21,9 +21,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/add-posts">Add Post</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="/upload">Image Upload</a>
+                        <a class="nav-link" href="/get-image">Show Image</a>
                     </li>
                 </ul>
 

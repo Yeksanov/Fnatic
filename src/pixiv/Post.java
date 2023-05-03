@@ -3,17 +3,25 @@ package pixiv;
 public class Post {
 
     private int id;
-    private Author author;
-    private String category;
+    private String author;
+    private String imageUrl;
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     private String description;
 
     public Post() {
     }
 
-    public Post(int id, Author author, String category, String description) {
+    public Post(int id, String author, String imageUrl, String description) {
         this.id = id;
         this.author = author;
-        this.category = category;
         this.description = description;
     }
 
@@ -25,20 +33,12 @@ public class Post {
         this.id = id;
     }
 
-    public Author getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDescription() {

@@ -6,23 +6,21 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pixiv.DBConnection;
-import pixiv.Post;
-import pixiv.Posts;
-
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-@WebServlet(value = "/posts")
-public class PostServlet extends HttpServlet {
+@WebServlet(value = "/get-image")
+public class GetImageServlet extends HttpServlet  {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ArrayList<Post> posts = DBConnection.getPosts();
 
-        request.setAttribute("posty", posts);
+      String imageUrl = null;
+       imageUrl = DBConnection.getImage(10);
 
-        request.getRequestDispatcher("index.jsp").forward(request, response);
 
+
+       request.setAttribute("imageUrl", imageUrl);
+        request.getRequestDispatcher("/showImage.jsp").forward(request, response);
     }
 }
