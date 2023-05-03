@@ -18,11 +18,12 @@ public class PostServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         ArrayList<Post> posts = DBConnection.getPosts();
 
         request.setAttribute("posty", posts);
 
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
 
     }
 }
