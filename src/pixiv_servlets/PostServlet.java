@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import pixiv.DBConnection;
 import pixiv.Post;
-import pixiv.Posts;
+
 
 
 import java.io.IOException;

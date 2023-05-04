@@ -1,4 +1,4 @@
-<div class="modal fade" id="editStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="editPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -7,56 +7,39 @@
             </div>
             <div class="modal-body">
 
-                <form action="/save-student" method="post">
-                    <input type="hidden" name="id" value="<%=student.getId()%>"> <!--часто используемая всеми имба фигня для того чтобы узнать сразу же допустим ID для сервлета при EDIT, особеннов в ВК -->
+                <form action="/edit-post" method="post">
+                    <input type="hidden" name="post_id" value="<%=post.getId()%>"> <!--часто используемая всеми имба фигня для того чтобы узнать сразу же допустим ID для сервлета при EDIT, особеннов в ВК -->
                     <div class="row">
                         <div class="col-12">
-                            <label>NAME:</label>
+                            <label>Author:</label>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <input type="text" class="form-control" name="student_name" value="<%=student.getName()%>">
+                            <input type="text" class="form-control" name="post_author" value="<%=post.getAuthor()%>">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label>SURNAME:</label>
+                            <label>Image:</label>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <input type="text" class="form-control" name="student_surname" value="<%=student.getSurname()%>">
+                            <input type="text" class="form-control" name="post_image" value="<%=post.getImageUrl()%>">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label>BIRTHDATE:</label>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-12">
-                            <input type="date" class="form-control" name="student_birthdate" value="<%=student.getBirthdate()%>">
-                        </div>
-                    </div>
-
-
-
                     <div class="row mt-3">
                         <div class="col-12">
-                            <label>CITY:</label>
+                            <label>DESCRIPTION : </label>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <select class="form-select" name="student_city">
-                                <option <%=(student.getCity().equals("Almaty")?"selected":"")%>>Almaty</option>
-                                <option <%=(student.getCity().equals("Astana")?"selected":"")%>>Astana</option>
-                                <option <%=(student.getCity().equals("Shymkent")?"selected":"")%>>Shymkent</option>
-                                <option <%=(student.getCity().equals("Oral")?"selected":"")%>>Oral</option>
-                            </select>
+                            <textarea name="post_description" class="form-control" rows="10" ><%=post.getDescription()%></textarea>
                         </div>
                     </div>
+
 
                     <div class="row mt-3">
                         <div class="col-12">

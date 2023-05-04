@@ -137,4 +137,27 @@ public class DBConnection {
 
         return post;
     }
+
+    public static void updateBook(Post post) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("" +
+                    "UPDATE posts " +
+                    "SET " +
+                    "author = ?, " +
+                    "imageUrl = ?, " +
+                    "description = ? " +
+                    "WHERE id = ?");
+
+            statement.setString(1, post.getAuthor());
+            statement.setString(2, post.getImageUrl());
+            statement.setString(3, post.getDescription());
+            statement.setInt(4, post.getId());
+
+            statement.executeUpdate();
+            statement.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

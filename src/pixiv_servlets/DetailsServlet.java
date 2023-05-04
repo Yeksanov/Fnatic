@@ -17,7 +17,7 @@ public class DetailsServlet  extends HttpServlet {
         int id = -1;
 
         try {
-            id = Integer.parseInt(request.getParameter("book_id"));
+            id = Integer.parseInt(request.getParameter("post_id"));
         }catch (Exception e){
         }
 

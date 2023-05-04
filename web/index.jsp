@@ -66,10 +66,13 @@
         <div class="col-sm-3 mt-3" >
             <div class="block ">
 
-                        <picture >
-<%--                                <source srcset="<%=post.getImageUrl()%>" type="image/svg+xml" width="1080px" height="768px">--%>
-                            <img name="image" src="<%=posts.get(i).getImageUrl()%>" class="img-thumbnail " >
+                <a href="/details?post_id=<%=posts.get(i).getId()%>">
+                    <picture >
+                        <%--                                <source srcset="<%=post.getImageUrl()%>" type="image/svg+xml" width="1080px" height="768px">--%>
+                        <img name="image" src="<%=posts.get(i).getImageUrl()%>" class="img-thumbnail " >
                     </picture>
+                </a>
+
             </div>
         </div>
 

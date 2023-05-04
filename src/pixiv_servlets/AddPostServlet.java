@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import pixiv.DBConnection;
 import pixiv.Post;
-import pixiv.Posts;
 
 import java.io.File;
 import java.io.IOException;
