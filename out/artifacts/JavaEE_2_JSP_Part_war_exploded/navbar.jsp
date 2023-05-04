@@ -13,17 +13,14 @@
                         <a class="nav-link "  href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add-book-page">Add Book</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/authors">Authors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/add-posts">Add Post</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/get-image">Show Image</a>
-                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link" href="/get-image">Show Image</a>--%>
+<%--                    </li>--%>
                 </ul>
 
             </div>

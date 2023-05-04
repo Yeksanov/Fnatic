@@ -109,4 +109,32 @@ public class DBConnection {
         }
         return imageUrl;
     }
+
+    public static Post getPost(int id) {
+
+        Post post = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM posts " +
+                    "WHERE id = ?");
+
+            statement.setInt(1, id);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if(resultSet.next()) {
+                post = new Post();
+                post.setId(resultSet.getInt("id"));
+                post.setAuthor(resultSet.getString("author"));
+                post.setImageUrl(resultSet.getString("imageUrl"));
+                post.setDescription(resultSet.getString("description"));
+
+            }
+            statement.close();
+
+        } catch (Exception e) {
+        }
+
+
+        return post;
+    }
 }
