@@ -46,7 +46,6 @@ public class EditServlet extends HttpServlet {
 
 
                 // Получаем URL изображения
-                String contextPath = getServletContext().getContextPath();
 
                 String imageUrl = "http://localhost:8888/images1/" + fileName;
 
