@@ -5,6 +5,18 @@ public class Users {
     private String email;
     private String password;
     private String fullName;
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    private int role;
+
+
     public Users() {
     }
     public Users(Long id, String email, String password, String fullName) {
@@ -45,4 +57,6 @@ public class Users {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
+
+
 }

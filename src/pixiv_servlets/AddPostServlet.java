@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import pixiv.DBConnection;
 import pixiv.Post;
+import pixiv.Users;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,20 +21,14 @@ import java.sql.SQLException;
 @WebServlet(value = "/add-posts")
 public class AddPostServlet extends HttpServlet {
 
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-
-        response.sendRedirect("/posts.jsp");
-
-
-    }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/addPosts_IMG.jsp").forward(request, response);
+
+        Users user = (Users) request.getSession().getAttribute("currentUser");
+        if(user!=null) {
+            request.getRequestDispatcher("/addPosts_IMG.jsp").forward(request, response);
+        } else{
+            response.sendRedirect("/login");
+        }
     }
 }

@@ -5,10 +5,12 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pixiv.Comment;
 import pixiv.DBConnection;
 import pixiv.Post;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet(value = "/details")
 public class DetailsServlet  extends HttpServlet {
@@ -23,6 +25,11 @@ public class DetailsServlet  extends HttpServlet {
 
         Post post = DBConnection.getPost(id);
         request.setAttribute("postSelected", post);
+
+        if (post != null) {
+            ArrayList<Comment> comments = DBConnection.getComments(post.getId());
+            request.setAttribute("comments", comments);
+        }
 
         request.getRequestDispatcher("/details.jsp").forward(request, response);
     }

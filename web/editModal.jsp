@@ -43,7 +43,7 @@
 
                     <div class="row mt-3">
                         <div class="col-12">
-                            <button class="btn btn-primary">SAVE STUDENT</button>
+                            <button class="btn btn-primary">SAVE POST</button>
                         </div>
                     </div>
                 </form>

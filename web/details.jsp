@@ -53,16 +53,57 @@
                     </div>
                 </div>
 
-                <div class="row mt-3">
+
+            <%
+                if (currentUser != null && currentUser.getRole() == 1 ) {
+            %>
+                <div class="row mt-3 mb-3">
                     <div class="col-12">
-                        <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#editPost" >EDIT POST</button>
+                        <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#editPost" >EDIT POST</button>
+                        <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#deletePost" >DELETE POST</button>
                     </div>
                 </div>
+            <%@include file="editModal.jsp"%>
+            <%@include file="deleteModal.jsp"%>
+
+            <%
+                } if(currentUser!=null) {
+            %>
+
+            <%@include file="comment.jsp"%>
+
+
+            <%
+                }
+            %>
+
+            <div class="row pb-5">
+                <div class="col-12">
+                    <%
+                        ArrayList<Comment> comments = (ArrayList<Comment>) request.getAttribute("comments");
+                        if (comments != null){
+                            for(Comment comment : comments){
+                    %>
+                    <div class="list-group">
+                        <a href="JavaScript:void(0)" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><%=comment.getUser().getFullName()%></h5>
+                                <small class="text-body-secondary"><%=comment.getPostDate()%></small>
+                            </div>
+                            <p class="mb-1"><%=comment.getComment()%></p>
+                        </a>
+                    </div>
+                    <%
+                            }
+                        }
+                    %>
+                </div>
+            </div>
 
         </div>
     </div>
 
-        <%@include file="editModal.jsp"%>
+
 
     <%
         }
