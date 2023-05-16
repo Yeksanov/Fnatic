@@ -37,8 +37,9 @@
                         %>
 
 
-        <div class="col-sm-3 mt-3" >
-            <div class="card  " style="; text-align: center; border-width: 5px; border-color: #0a53be; border-radius: 10px;"   >
+<%--        <div class="col-sm-3 mt-3" >--%>
+            <div class="col mt-3" >
+            <div class="card  " style="; text-align: center; border-width: 5px; border-color: #0a53be; border-radius: 10px; width: 300px;"   >
 
                 <a href="/details?post_id=<%=posts.get(i).getId()%>">
                     <picture >

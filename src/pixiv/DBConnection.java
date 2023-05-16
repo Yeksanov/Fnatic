@@ -127,7 +127,7 @@ public class DBConnection {
         return post;
     }
 
-    public static void updateBook(Post post) {
+    public static void updatePost(Post post) {
         try {
             PreparedStatement statement = connection.prepareStatement("" +
                     "UPDATE posts " +

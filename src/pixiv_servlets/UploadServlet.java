@@ -47,13 +47,11 @@ public class UploadServlet extends HttpServlet {
 
                     // Получаем URL изображения
                     String contextPath = getServletContext().getContextPath();
-//           String imageUrl0 = contextPath + fileName;
 
                     String imageUrl = "http://localhost:8888/images1/" + fileName;
 
 
                     post.setImageUrl(imageUrl);
-//            DBConnection.addImage(imageUrl);
 
                     // Создаем объект FileOutputStream и записываем в него данные из потока входных данных
                     outputStream = new FileOutputStream(new File(filePath));
