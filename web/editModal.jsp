@@ -28,7 +28,8 @@
                         <div class="col-12">
 
 <%--                            <input type="file" class="form-control mt-3" name="post_image" accept="image/*">--%>
-                            <input type="file" class="form-control" name="post_image" value="<%=post.getImageUrl()%>" accept="image/*"  >
+<%--                            <input type="hidden" class="form-control" name="post_image" value="<%=post.getImageUrl()%>"  >--%>
+                    <input type="file" class="form-control" name="post_image" value="<%=post.getImageUrl()%>" accept="image/*"  >
                         </div>
                     </div>
                     <div class="row mt-3">
