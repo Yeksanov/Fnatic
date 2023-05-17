@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 @WebServlet(value = "/posts")
-public class PostServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

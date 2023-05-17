@@ -72,32 +72,6 @@ public class DBConnection {
     }
 
 
-    public static String getImage(int id) {
-        String imageUrl = null;
-
-        try {
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT image FROM images WHERE id = ? "
-            );
-            statement.setInt(1, id);
-
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                imageUrl = resultSet.getString("image");
-
-            }
-
-
-
-            // Использование класса java.net.URL для чтения изображения из потока ввода
-
-
-        } catch (Exception ex) {
-
-        }
-        return imageUrl;
-    }
 
     public static Post getPost(int id) {
 
